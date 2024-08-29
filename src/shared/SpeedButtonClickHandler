@@ -1,0 +1,24 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local playerGui = player.PlayerGui
+
+local IncreaseWalkSpeedFunction = ReplicatedStorage.Instances.IncreaseWalkSpeedFunction
+local speedPurchaseGui = ReplicatedStorage.Instances.SpeedPurchaseGui
+local speedButton = speedPurchaseGui.SpeedButton
+
+local function onButtonClicked()
+	local success, purchased = pcall(IncreaseWalkSpeedFunction.InvokeServer, IncreaseWalkSpeedFunction)
+	if not success then
+		-- purchased will be the error message if success is false
+		error(purchased)
+	elseif success and not purchased then
+		warn("Not enough coins!")
+	end
+end
+
+speedButton.Activated:Connect(onButtonClicked)
+
+-- Add the JumpPurchaseGui to the player's Gui
+speedPurchaseGui.Parent = playerGui
