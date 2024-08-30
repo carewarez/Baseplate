@@ -12,7 +12,7 @@ local coinsFolder = Workspace.World.Coins
 local coins = coinsFolder:GetChildren()
 
 local COIN_KEY_NAME = PlayerData.COIN_KEY_NAME
-local COOLDOWN = 10
+local COOLDOWN = 60
 local COIN_AMOUNT_TO_ADD = 1
 
 

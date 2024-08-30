@@ -13,7 +13,7 @@ local IncreaseJumpPowerFunction = ReplicatedStorage.Instances.IncreaseJumpPowerF
 local JUMP_KEY_NAME = PlayerData.JUMP_KEY_NAME
 local COIN_KEY_NAME = PlayerData.COIN_KEY_NAME
 local JUMP_POWER_INCREMENT = 30
-local JUMP_COIN_COST = 1
+local JUMP_COIN_COST = 2
 
 local function updateJumpPower(player, updateFunction)
 	-- Update the jump power table

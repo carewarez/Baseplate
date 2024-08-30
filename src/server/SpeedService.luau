@@ -13,7 +13,7 @@ local IncreaseWalkSpeedFunction = ReplicatedStorage.Instances.IncreaseWalkSpeedF
 local SPEED_KEY_NAME = PlayerData.SPEED_KEY_NAME
 local COIN_KEY_NAME = PlayerData.COIN_KEY_NAME
 local WALK_SPEED_INCREMENT = 10
-local SPEED_COIN_COST = 2
+local SPEED_COIN_COST = 6
 
 local function updateWalkSpeed(player,updateFunction)
 	-- Update the walk speed table
